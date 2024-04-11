@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Editar">
+
+    <TextView
+        android:id="@+id/textView_editar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/editar_perfil"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_editar_usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="@string/usuario"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView_editar"
+        app:layout_constraintStart_toStartOf="@+id/textView_editar"
+        app:layout_constraintTop_toBottomOf="@id/textView_editar" />
+
+    <EditText
+        android:id="@+id/editText_editar_contraseña"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/contraseña"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@id/editText_editar_usuario"
+        app:layout_constraintStart_toStartOf="@id/editText_editar_usuario"
+        app:layout_constraintTop_toBottomOf="@id/editText_editar_usuario" />
+
+    <EditText
+        android:id="@+id/editText_editar_correo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/correo"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@id/editText_editar_contraseña"
+        app:layout_constraintStart_toStartOf="@id/editText_editar_contraseña"
+        app:layout_constraintTop_toBottomOf="@id/editText_editar_contraseña" />
+
+    <EditText
+        android:id="@+id/editText_editar_nombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/nombre_y_apellido"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@id/editText_editar_correo"
+        app:layout_constraintStart_toStartOf="@id/editText_editar_correo"
+        app:layout_constraintTop_toBottomOf="@id/editText_editar_correo" />
+
+    <EditText
+        android:id="@+id/editText_editar_cedula"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/cedula"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@id/editText_editar_nombre"
+        app:layout_constraintStart_toStartOf="@id/editText_editar_nombre"
+        app:layout_constraintTop_toBottomOf="@id/editText_editar_nombre" />
+
+    <Button
+        android:id="@+id/button_editar_actualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/actualizar"
+        app:layout_constraintEnd_toEndOf="@id/editText_editar_cedula"
+        app:layout_constraintHorizontal_bias="0.209"
+        app:layout_constraintStart_toStartOf="@id/editText_editar_cedula"
+        app:layout_constraintTop_toBottomOf="@id/editText_editar_cedula" />
+
+    <Button
+        android:id="@+id/button_editar_cancelar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/cancelar"
+        app:layout_constraintEnd_toEndOf="@id/button_editar_actualizar"
+        app:layout_constraintStart_toStartOf="@id/button_editar_actualizar"
+        app:layout_constraintTop_toBottomOf="@id/button_editar_actualizar" />
+
+    <TextView
+        android:id="@+id/textView_editar_SesionActual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Sesion Actual"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
