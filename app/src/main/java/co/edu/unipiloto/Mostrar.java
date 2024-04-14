@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -26,12 +27,21 @@ public class Mostrar extends AppCompatActivity {
 
         ArrayList<String> list = new ArrayList<String>();
         for (Usuario u: l) {
-            list.add("Nombre: " + u.getNombre() + " Correo: " + u.getCorreo());
-            list.add("Usuario: " + u.getUsuario() + " Contraseña: " + u.getPassword() + " id: " + u.getId());
-            list.add("Cédula: " + u.getCedula() + " Rol: " + u.getRol() + "Genero: " + u.getGenero());
+            list.add("Id: " + u.getId());
         }
         ArrayAdapter<String> a=new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1,list);
         lstMostrarUsuarios.setAdapter(a);
+
+        lstMostrarUsuarios.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                Usuario usuarioSeleccionado = l.get(position);
+                int usuarioId = usuarioSeleccionado.getId();
+                Intent imu1 = new Intent(Mostrar.this, DetalleUsuario.class);
+                imu1.putExtra("usuarioId", usuarioId);
+                startActivity(imu1);
+            }
+        });
     }
 
 }

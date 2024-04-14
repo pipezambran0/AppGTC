@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@mipmap/fondo_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Opciones">
@@ -31,7 +32,7 @@
     <Button
         android:id="@+id/button_opciones_editar"
         android:layout_width="180dp"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:layout_marginTop="40dp"
         android:text="@string/editar_perfil"
         app:layout_constraintEnd_toEndOf="@+id/imageView_opciones"
@@ -41,8 +42,8 @@
     <Button
         android:id="@+id/button_opciones_eliminar"
         android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
         android:text="@string/eliminar_perfil"
         app:layout_constraintEnd_toEndOf="@+id/button_opciones_editar"
         app:layout_constraintHorizontal_bias="0.0"
@@ -52,8 +53,8 @@
     <Button
         android:id="@+id/button_opciones_ver"
         android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
         android:text="@string/ver_perfiles"
         app:layout_constraintEnd_toEndOf="@+id/button_opciones_eliminar"
         app:layout_constraintHorizontal_bias="0.0"
@@ -62,9 +63,9 @@
 
     <Button
         android:id="@+id/button_opciones_volver"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
         android:text="@string/volver"
         app:layout_constraintEnd_toEndOf="@+id/button_opciones_ver"
         app:layout_constraintHorizontal_bias="0.487"

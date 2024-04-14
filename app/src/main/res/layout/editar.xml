@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/fondo_main"
     tools:context=".Editar">
 
     <TextView
@@ -17,88 +18,121 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/editText_editar_usuario"
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout_editar_usuario"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:ems="10"
-        android:hint="@string/usuario"
-        android:inputType="text"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/textView_editar"
-        app:layout_constraintStart_toStartOf="@+id/textView_editar"
-        app:layout_constraintTop_toBottomOf="@id/textView_editar" />
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@id/textView_editar"
+        app:layout_constraintStart_toStartOf="@id/textView_editar"
+        app:layout_constraintTop_toBottomOf="@id/textView_editar">
 
-    <EditText
-        android:id="@+id/editText_editar_contraseña"
+        <EditText
+            android:id="@+id/editText_editar_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:hint="@string/usuario"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout_editar_contraseña"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/contraseña"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@id/editText_editar_usuario"
-        app:layout_constraintStart_toStartOf="@id/editText_editar_usuario"
-        app:layout_constraintTop_toBottomOf="@id/editText_editar_usuario" />
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@id/textInputLayout_editar_usuario"
+        app:layout_constraintStart_toStartOf="@id/textInputLayout_editar_usuario"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayout_editar_usuario">
 
-    <EditText
-        android:id="@+id/editText_editar_correo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/correo"
-        android:inputType="textEmailAddress"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@id/editText_editar_contraseña"
-        app:layout_constraintStart_toStartOf="@id/editText_editar_contraseña"
-        app:layout_constraintTop_toBottomOf="@id/editText_editar_contraseña" />
+        <EditText
+            android:id="@+id/editText_editar_contraseña"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:hint="@string/contraseña"
+            android:inputType="textPassword"
+            android:minHeight="48dp" />
 
-    <EditText
-        android:id="@+id/editText_editar_nombre"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/nombre_y_apellido"
-        android:inputType="text"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@id/editText_editar_correo"
-        app:layout_constraintStart_toStartOf="@id/editText_editar_correo"
-        app:layout_constraintTop_toBottomOf="@id/editText_editar_correo" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/editText_editar_cedula"
-        android:layout_width="0dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout_editar_correo"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/cedula"
-        android:inputType="text"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@id/editText_editar_nombre"
-        app:layout_constraintStart_toStartOf="@id/editText_editar_nombre"
-        app:layout_constraintTop_toBottomOf="@id/editText_editar_nombre" />
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@id/textInputLayout_editar_contraseña"
+        app:layout_constraintStart_toStartOf="@id/textInputLayout_editar_contraseña"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayout_editar_contraseña">
+
+        <EditText
+            android:id="@+id/editText_editar_correo"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:hint="@string/correo"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout_editar_nombre"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@id/textInputLayout_editar_correo"
+        app:layout_constraintStart_toStartOf="@id/textInputLayout_editar_correo"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayout_editar_correo">
+
+        <EditText
+            android:id="@+id/editText_editar_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:hint="@string/nombre_y_apellido"
+            android:inputType="text"
+            android:minHeight="48dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout_editar_cedula"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@id/textInputLayout_editar_nombre"
+        app:layout_constraintStart_toStartOf="@id/textInputLayout_editar_nombre"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayout_editar_nombre">
+
+        <EditText
+            android:id="@+id/editText_editar_cedula"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:hint="@string/cedula"
+            android:inputType="text"
+            android:minHeight="48dp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/button_editar_actualizar"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
         android:text="@string/actualizar"
-        app:layout_constraintEnd_toEndOf="@id/editText_editar_cedula"
+        app:layout_constraintEnd_toEndOf="@id/textInputLayout_editar_cedula"
         app:layout_constraintHorizontal_bias="0.209"
-        app:layout_constraintStart_toStartOf="@id/editText_editar_cedula"
-        app:layout_constraintTop_toBottomOf="@id/editText_editar_cedula" />
+        app:layout_constraintStart_toStartOf="@id/textInputLayout_editar_cedula"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayout_editar_cedula" />
 
     <Button
         android:id="@+id/button_editar_cancelar"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
         android:text="@string/cancelar"
         app:layout_constraintEnd_toEndOf="@id/button_editar_actualizar"
         app:layout_constraintStart_toStartOf="@id/button_editar_actualizar"

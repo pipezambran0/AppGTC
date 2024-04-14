@@ -75,7 +75,7 @@
         android:id="@+id/button_MIPC_Salir"
         android:layout_width="0dp"
         android:layout_height="55dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="@string/salir"
         app:layout_constraintEnd_toEndOf="@+id/button_MIPC_Opciones"
         app:layout_constraintStart_toStartOf="@+id/button_MIPC_Opciones"
